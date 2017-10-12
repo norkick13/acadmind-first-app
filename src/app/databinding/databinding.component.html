@@ -1,0 +1,11 @@
+<h1>String Interpolation</h1>
+<p>
+ {{stringInterpolation}} | {{numberInterpolation}}
+</p>
+<hr>
+<h1>Porperty Binding</h1>
+<input type="text" [value]="stringInterpolation">
+<p [ngClass] = "{redBorder: onTest()}" > IS this is Styled?</p>
+<p [ngStyle] = "{color: 'green'}" > IS this is Styled?</p>
+<h3>Custom Property Binding</h3>
+<app-property-binding [result]="10" ></app-property-binding>
