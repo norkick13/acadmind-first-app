@@ -13,14 +13,16 @@ import {
 
 @Component({
   selector: 'app-lifecycle',
-  templateUrl: `
+  template: `
   <ng-content></ng-content>
   <hr>
-  <p>{{bindable}}</p>
+  <p #boundParagraph>{{bindable}}</p>
+  <p>{{boundParagraph.textContent}}</p>
   `,
   styles: []
 })
-export class LifecycleComponent implements OnChanges, OnInit, DoCheck, AfterContentInit,AfterContentChecked,AfterViewInit, AfterViewChecked, OnDestroy {
+export class LifecycleComponent implements OnChanges, OnInit, DoCheck, AfterContentInit,AfterContentChecked,AfterViewInit, AfterViewChecked, OnDestroy 
+{
   @Input() bindable= 1000;
   constructor() { }
 

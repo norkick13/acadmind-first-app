@@ -5,12 +5,12 @@ import { Component,  } from '@angular/core';
   template: 
   `
     <h1>Root Component</h1>
-   <app-lifecycle *ngIf="!delete">
+   <app-lifecycle *ngIf="!delete [bindable]= "boundValue">
     <p>{{test}}</p>
    </app-lifecycle>
-   <button (click)="delete = true"  [bindable]= "">Click to delte</button>
+   <button (click)="delete = true"  >Click to delte</button>
    <button (click)="test = 'Changed value'" >Click to Change Content</button>
-   <button (click)="boundValue=2000 true = 'Changed value'" >Click to Change Binding/button>
+   <button (click)="boundValue=2000 ">Click to Change Binding/button>
   `
 })
 export class AppComponent {
