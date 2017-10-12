@@ -1,1 +1,0 @@
-export { DatabindingComponent }  from './databinding/databinding.component';
